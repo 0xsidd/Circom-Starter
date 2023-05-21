@@ -32,7 +32,7 @@ npm install
 6) generates bot publinInput proof and callData for sc.
 ```Commands
 6) npm run gen-params 
-
+```
 7) clears circuit related data from current directory.
 
 ```Commands
