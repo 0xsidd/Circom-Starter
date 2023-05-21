@@ -1,0 +1,20 @@
+{
+  "name": "chainlink",
+  "version": "1.0.0",
+  "description": "Decentrralized ZK-Snark powered smart contract wallet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "./scripts/compile.sh",
+    "build": "./scripts/build.sh",
+    "clean": "./scripts/clean.sh",
+    "gen-sc": "./scripts/genSc.sh",
+    "gen-calldata": "./scripts/genProof.sh",
+    "gen-params": "./scripts/genProofWithCallData.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "circomlib": "^2.0.5"
+  }
+}

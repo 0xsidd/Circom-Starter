@@ -1,0 +1,5 @@
+circuits/multiplier2_js
+node_modules
+circuits/*.r1cs
+circuits/*.sym
+circuits/*.json
