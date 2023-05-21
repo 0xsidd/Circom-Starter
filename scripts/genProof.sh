@@ -11,6 +11,6 @@ directory_path="./circuits/${circuit_name}_js/"
 # Change to the specified directory
 cd "$directory_path"
 
-# snarkjs generatecall
+snarkjs generatecall
 
 
