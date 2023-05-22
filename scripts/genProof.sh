@@ -6,7 +6,7 @@ circuit_file=$1
 
 # Set the directory path
 circuit_name=$(basename "$circuit_file" | cut -d. -f1)
-directory_path="./circuits/${circuit_name}_js/"
+directory_path="./circuits/${circuit_name}/${circuit_name}_js/"
 
 # Change to the specified directory
 cd "$directory_path"

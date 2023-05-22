@@ -6,7 +6,9 @@ circuit_file=$1
 
 # Set the other file names
 # circuits_directory="./circuits"
-input_file="circuits/input.json"
+circuit_name=$(basename "$circuit_file" | cut -d. -f1)
+
+input_file="circuits/${circuit_name}/${circuit_name}_input.json"
 
 # Run the Circom compiler
 circom ${circuit_file}.circom

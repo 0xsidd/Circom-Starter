@@ -15,18 +15,18 @@ output_file="pot12_0000.ptau"
 circuit_name=$(basename "$circuit_file" | cut -d. -f1)
 
 # Set the directory path
-circuits_directory="./circuits"
+circuits_directory="./circuits/${circuit_file}"
 directory_path="${circuit_file}_js"
 
 # Run the Circom compiler
-circom ${circuit_file}.circom --r1cs --wasm --sym -o ./circuits
+circom ${circuit_file}.circom --r1cs --wasm --sym -o ./circuits/${circuit_name}
 
 
 # Change to the specified directory
 cd "$directory_path"
 
 # Execute the command
-node generate_witness.js ${circuit_name}.wasm ../input.json witness.wtns
+node generate_witness.js ${circuit_name}.wasm ../${circuit_name}_input.json witness.wtns
 snarkjs powersoftau new "$curve" "$depth" "$output_file" -v
 snarkjs powersoftau contribute ${output_file} pot12_0001.ptau --name="First contribution" -v
 snarkjs powersoftau prepare phase2 pot12_0001.ptau pot12_final.ptau -v

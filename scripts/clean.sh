@@ -19,5 +19,4 @@ destination_directory="./circuits"
 find "$circuits_directory" -type f -name "*.r1cs" -delete
 find "$circuits_directory" -type f -name "*.sym" -delete
 rm -rf "$folder_path"
-# find "$circuits_internal_directory" -type f -name "*.wasm" -delete
-
+# find "$circuits_internal_directory" -type f -name "*.wasm" -delet
